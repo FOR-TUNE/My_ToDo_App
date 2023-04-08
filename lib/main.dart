@@ -8,6 +8,7 @@ void main() {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
+        fontFamily: 'Merriweather',
       ),
       home: const HomePage(),
     ),
