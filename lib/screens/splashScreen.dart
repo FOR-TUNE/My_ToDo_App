@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:my_todo_app/constants/colors.dart';
+import 'package:my_todo_app/constants/sizeConfig.dart';
 import 'package:my_todo_app/screens/homeScreen.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -34,11 +35,23 @@ class SplashScreen extends StatelessWidget {
             children: [
               SvgPicture.asset(
                 'assets/svgs/mainToDoIcon.svg',
-                height: 100,
-                width: 80,
+                height: screenAwareSize(100, context),
+                width: screenAwareSize(80, context, width: true),
                 color: toPurple,
               ),
-              
+              addVerticalSp(2),
+              const Text(
+                'My ToDo App',
+                style: TextStyle(
+                  color: toBlack,
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              addVerticalSp(15),
+              SizedBox(
+                child: spinkit,
+              ),
             ],
           ),
         ),
